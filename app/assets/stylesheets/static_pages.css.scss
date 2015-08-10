@@ -1,0 +1,26 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+// main page
+#main-text {
+  margin-top: -40px;
+}
+#main-page {
+  margin-top: 80px;
+  margin-left: -80px;
+  width: 113%;
+  // margin-bottom: 50px;
+  // height: 20%;
+}
+
+.signup-form .jumbotron {
+  background-color: #D4F0D1
+}
+/* forms */
+
+.submit-button {
+  margin-top: 10px;
+}

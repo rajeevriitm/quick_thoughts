@@ -1,0 +1,9 @@
+# # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+rajeev:
+  name: rajeev
+  email: rajeevriitm@gmail.com
+
+raji:
+  name: raji
+  email: raji@gmail.com
