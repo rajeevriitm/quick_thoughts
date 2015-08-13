@@ -2,7 +2,7 @@ require 'test_helper'
 
 class StaticPagesControllerTest < ActionController::TestCase
   def setup
-    @base="Rate Everything"
+    @base="QuickThoughts"
   end
   test "should get home" do
     get :home

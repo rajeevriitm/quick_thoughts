@@ -68,6 +68,11 @@ end
 watch('app/views/layouts/application.html.erb') do
 'test/integration/site_layout_test.rb'
 end
+watch(%r{^test/fixtures/(.+)\.yml}) { |m| "test/models" }
+watch(%r{^test/fixtures/(.+)\.yml}) { |m| "test/controllers/#{m[1]}_controller_test.rb" }
+watch(%r{^test/fixtures/(.+)\.yml}) { |m| "test/integration" }
+
+
 def integration_tests(resource = :all)
 if resource == :all
 Dir["test/integration/*"]

@@ -1,6 +1,6 @@
 module ApplicationHelper
   def title_display(title)
-    base="Rate Everything"
+    base="QuickThoughts"
     if title==""
       return base
     else

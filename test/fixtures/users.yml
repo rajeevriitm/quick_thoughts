@@ -3,7 +3,11 @@
 rajeev:
   name: rajeev
   email: rajeevriitm@gmail.com
+  password_digest: <%= User.digest("sadsad") %>
+  remember_digest: nil
 
 raji:
   name: raji
   email: raji@gmail.com
+  password_digest: <%= User.digest("sadsad") %>
+  remember_digest: nil

@@ -36,7 +36,7 @@ group :production do
 end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+  gem 'byebug', '3.4.0'
   gem 'guard-livereload', '~> 2.4', require: false
   gem 'rb-fsevent'
   # Access an IRB console on exception pages or by using <%= console %> in views

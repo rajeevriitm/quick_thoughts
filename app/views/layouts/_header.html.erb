@@ -1,6 +1,5 @@
 <nav class="navbar navbar-default navbar-fixed-top">
 
-
   <div class="container-fluid" id="header">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -11,25 +10,14 @@
       <span class="icon-bar"></span>
   </button>
   <div id="logo">
-      <%= link_to("Quick Thoughts", root_path , class: "navbar-brand") %>
+      <%= link_to("QuickThoughts", root_path , class: "navbar-brand") %>
   </div>
 </div>
-
-<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-  <form id="signin" class="navbar-form navbar-right" role="form">
-    <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-        <input id="email" type="email" class="form-control" name="email" value="" placeholder="Email Address">
-    </div>
-
-    <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-        <input id="password" type="password" class="form-control" name="password" value="" placeholder="Password">
-    </div>
-
-    <button type="submit" class="btn btn-primary">Login</button>
-</form>
-</div>
+<% if logged_in? %>
+    <%= render 'layouts/logged_in_header' %>
+<% else %>
+    <%= render 'layouts/nonlogged_in_header' %>
+<% end  %>
 </div>
 
 </nav>
