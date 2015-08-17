@@ -24,12 +24,20 @@ $my-color: #D4F0D1;
 body {
   padding-top: 80px;
 }
+.about-web{
+  margin: -10px;
+  padding: 10px;
+}
+.flash{
+  margin-top: 18px;
+  margin-bottom: -36px;
+}
 // section {
 //   overflow: auto;
 // }
-textarea {
-  resize: vertical;
-}
+// textarea {
+//   resize: vertical;
+// }
 .center {
   text-align: left;
   h1 {
@@ -75,7 +83,7 @@ footer small {
   float: left;
 }
 footer ul {
-  float: right;
+  float: left;
   list-style: none;
 }
 footer ul li {

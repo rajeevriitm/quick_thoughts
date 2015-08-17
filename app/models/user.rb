@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   attr_accessor :remember_token
   before_save {self.email=email.downcase}
+  has_many :thoughts,dependent: :destroy
   validates :name,presence: true,length: {maximum: 50}
   validates :email,presence:true,length:{maximum: 250}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -25,5 +26,8 @@ class User < ActiveRecord::Base
   end
   def forget
     self.update_attribute(:remember_digest, nil)
+  end
+  def home_feed
+    self.thoughts
   end
 end

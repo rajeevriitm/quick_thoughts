@@ -7,14 +7,16 @@
 // main page
 .main-body{
   background-color: #ebeef4;
-  margin-top: -25px ;
+  margin-top: -30px ;
+  // padding-top: -35px;
 }
 #main-text {
-  margin-top: -50px;
+  margin-top: -40px;
+  margin-left: -50px;
 }
 #main-page {
-  margin-left: -80px;
-  width: 113%;
+  // margin-left: -20px;
+  // width: 113%;
   // margin-bottom: 50px;
   // height: 20%;
 }
@@ -36,7 +38,7 @@
 }
 /* Profile container */
 .profile {
-  margin: 50px 0;
+  margin: 40px 0 ;
   // background: #CDDAE2;
 }
 
@@ -44,7 +46,8 @@
 .profile-sidebar {
   padding: 20px 10px 10px 0;
   background: #fff;
-  margin-left: -60px;
+  // margin-left: -70px;
+  margin-right: -20px;
 }
 
 .profile-userpic img {

@@ -1,0 +1,58 @@
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.thought-feed{
+  margin-left: 10px;
+  margin-right: 20px;
+  // padding-right: 20px;
+  ol {
+    list-style: none;
+  }
+  // padding-right: -50px;
+  // background-color: blue;
+}
+
+.new_thought {
+  padding: 0 10px 10px 10px;
+  position: fixed;
+  width:29%;
+  // margin-left: 20px;
+  overflow: auto;
+  border-style: groove
+}
+.home-feed > .well{
+  background-color: #fff;
+  margin-right: -30px;
+}
+#thought_content{
+  height: 400px;
+}
+.thought-content{
+  font-family: serif;
+  line-height: 122%;
+  font-size: 120%;
+// letter-spacing: 2px;
+background-color: #fff;
+padding: 10px;
+margin: 0 -4px 0 -4px;
+}
+.thought-title{
+  font-family: Tahoma, Geneva, sans-serif ;
+  font-size: 125%;
+  margin-top: -4px;
+  // margin-left: -4px;
+  color: #1A2F1C;
+  border-bottom: 1px solid #eaeaea;
+}
+.thought-options{
+  margin: 6px 0 -8px 0 ;
+}
+.thought-respond{
+  padding-right: 5px;
+}
+.posted-time{
+  float: right ;
+}

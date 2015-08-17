@@ -1,0 +1,14 @@
+  <%= form_for(@thoughts ||= Thought.new ) do |f| %>
+  <%= render 'shared/error_messages',object:f.object  %>
+  <div >
+    <%=f.label :content ,"Thoughts"%>
+    <%= f.text_field :title, placeholder: "Title..." , class: "form-control "%>
+  </div>
+  <div >
+    <%= f.text_area :content, placeholder: "Write..." , class: "form-control "%>
+  </div>
+  <section  class="post-button">
+    <%= f.submit "Post", class: "btn btn-success btn-block" %>
+  </section>
+</span>
+<% end %>

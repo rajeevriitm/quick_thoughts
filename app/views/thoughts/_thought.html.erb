@@ -1,0 +1,27 @@
+<li class="well" >
+  <h4 class="thought-title">
+    <% unless thought_title=thought.title %>
+    Thought
+    <% else %>
+    <%= thought_title  %>
+    <% end %>
+    by <%= link_to thought.user.name,thought.user %>
+  </h4>
+  <div class="thought-content">
+  <p>
+    <%= thought.content  %>
+    </p>
+  </div>
+  <div class="thought-options">
+  <span class="thought-respond">
+  <%= link_to "Respond","#"  %>
+  </span>
+  <span class="thought-options">
+  <%= link_to "Options","#"  %>
+  </span>
+  <span class="posted-time">
+  Posted <%=  time_of_creation(thought.created_at) %>
+  </span>
+  </div>
+</li>
+
