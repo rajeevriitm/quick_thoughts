@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
-  get 'thoughts/idex'
-
-  get 'thoughts/new'
-
-  get 'thoughts/show'
-
-  get 'thoughts/edit'
+  get 'personal' ,  to:  'static_pages#personal'
+  get 'notes' , to: 'static_pages#notes'
+  get 'diary' ,  to: 'static_pages#diary'
   resources :thoughts
   resources :users
   post 'login' ,  to: 'sessions#create'

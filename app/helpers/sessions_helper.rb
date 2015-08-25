@@ -20,12 +20,12 @@ module SessionsHelper
     !current_user.nil?
   end
 
-  def correct_user(user)
-    if current_user != user
-      flash[:danger]="Not allwed to view the content"
-      redirect_to root_path
-    end
-  end
+  # def correct_user(user)
+  #   if current_user != user
+  #     flash[:danger]="Not allwed to view the content"
+  #     redirect_to root_path
+  #   end
+  # end
 
   def logout
     forget current_user

@@ -1,5 +1,8 @@
 <div class="home-feed" >
 <ol  class="well">
-<%= render current_user.thoughts %>
+<div class="feed-title "> <%= action_name.capitalize  %> </div>
+<%= render current_user.feed(action_name) %>
 </ol>
 </div>
+
+

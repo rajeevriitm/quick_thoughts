@@ -10,6 +10,6 @@ users=User.order(:created_at).take(6)
   users.each do |user|
     content=Faker::Lorem.paragraph(sentence_count= 10)
     title=Faker::Lorem.paragraph(sentence_count= 1)
-    user.thoughts.create!(content: content,title: title)
+    user.thoughts.create!(content: content,title: title,category: ["Home","Personal","Diary","Notes"].sample)
   end
 end

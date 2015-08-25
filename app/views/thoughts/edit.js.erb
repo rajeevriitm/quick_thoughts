@@ -1,0 +1,5 @@
+$('.thought-column').html("<%= escape_javascript(render 'shared/thoughts_form') %>");
+$('#thought_tag_list').tagsinput('add', '');
+$(".bootstrap-tagsinput").find("input").removeAttr("placeholder");
+$(".open .dropdown-toggle").dropdown("toggle");
+

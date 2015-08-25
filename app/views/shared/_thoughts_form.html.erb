@@ -1,14 +1,21 @@
-  <%= form_for(@thoughts ||= Thought.new ) do |f| %>
+  <%= form_for(@thought ||= Thought.new ) do |f| %>
   <%= render 'shared/error_messages',object:f.object  %>
-  <div >
     <%=f.label :content ,"Thoughts"%>
-    <%= f.text_field :title, placeholder: "Title..." , class: "form-control "%>
+  <div class="category">
+    <%= f.collection_select :category, Thought.select("DISTINCT(thoughts.category),thoughts.category").
+    reorder(:category),:category, :category  %>
   </div>
+    <%= f.text_field :title, placeholder: "Title..." , class: "form-control "%>
   <div >
     <%= f.text_area :content, placeholder: "Write..." , class: "form-control "%>
   </div>
+
+<%= f.text_field :tag_list, 'data-role'=>'tagsinput'  %>
   <section  class="post-button">
-    <%= f.submit "Post", class: "btn btn-success btn-block" %>
+    <%= f.submit "Post", class: "btn btn-success btn-sm btn-block thought-button" %>
   </section>
-</span>
+  <div id="visibility-point">
+  </div>
 <% end %>
+
+

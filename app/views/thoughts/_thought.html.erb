@@ -1,27 +1,37 @@
 <li class="well" >
-  <h4 class="thought-title">
-    <% unless thought_title=thought.title %>
+  <div class="thought-title">
+  <% thought_title=thought.title %>
+    <% if thought_title.empty? %>
     Thought
     <% else %>
     <%= thought_title  %>
     <% end %>
     by <%= link_to thought.user.name,thought.user %>
-  </h4>
+  </div>
   <div class="thought-content">
-  <p>
-    <%= thought.content  %>
+    <p>
+      <%= thought.content  %>
     </p>
   </div>
   <div class="thought-options">
-  <span class="thought-respond">
-  <%= link_to "Respond","#"  %>
-  </span>
-  <span class="thought-options">
-  <%= link_to "Options","#"  %>
-  </span>
-  <span class="posted-time">
-  Posted <%=  time_of_creation(thought.created_at) %>
-  </span>
+    <span class="thought-respond" data-id= "<%= thought.id %>" >
+      <button class="btn btn-link "> Respond </button>
+    </span>
+    <% if thought.user == current_user %>
+    <span class="thought-edit-delete">
+      <span class="dropdown">
+      <button class="btn btn-link  dropdown-toggle" type="button" data-toggle="dropdown" type="button">Options</button>
+        <ul class="dropdown-menu ">
+          <li><%= link_to "Edit",edit_thought_path(thought),remote: true  %></li>
+          <li><%= link_to "Delete",thought_path(thought) ,method: :delete %></li>
+        </ul>
+      </span>
+      <span class="posted-time">
+        Posted <%=  time_of_creation(thought.created_at) %>
+      </span>
+    </span>
+    <% end %>
   </div>
 </li>
+
 

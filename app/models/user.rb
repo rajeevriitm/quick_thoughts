@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   validates :email, format: {with: VALID_EMAIL_REGEX},uniqueness: {case_sensitive: false}
   has_secure_password
   validates :password, length:{minimum: 6},allow_blank: true
+  validate :picture_size
+  mount_uploader :picture,PictureUploader
 
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost
@@ -27,7 +29,17 @@ class User < ActiveRecord::Base
   def forget
     self.update_attribute(:remember_digest, nil)
   end
-  def home_feed
-    self.thoughts
+  def feed(action_name)
+    category=action_name.capitalize
+    self.thoughts.where('category=?',category)
   end
+
+  private
+  def picture_size
+    if picture.size > 2.megabytes
+      errors.add(:picture, "should be less than 2MB")
+    end
+  end
+
 end
+

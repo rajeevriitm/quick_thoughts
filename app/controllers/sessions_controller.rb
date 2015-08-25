@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       login user
       remember(user) if params[:session][:remember] == "1"
-      redirect_to user
+      redirect_back_or root_path
     else
       flash.now[:danger]= "Invalid username or password"
       render 'static_pages/home'
