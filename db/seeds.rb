@@ -1,5 +1,5 @@
 User.create!(name:"Rajeev Ramakrishnan",email:"rajeevriitm@gmail.com",
-  password:"sadsad",password_confirmation:"sadsad")
+  password:"sadsad",password_confirmation:"sadsad", about: "web developer")
 50.times do |n|
   name=Faker::Name.name
   email = "Rajeev-#{n+1}@railstutorial.org"

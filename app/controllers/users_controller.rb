@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   @user=User.find(params[:id])
   if @user.update_attributes(user_params)
     flash[:info]="Successfully edited"
-    redirect_to home_path
+    redirect_to home_url
   else
     render 'edit'
   end
