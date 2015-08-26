@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   @user=User.find(params[:id])
   if @user.update_attributes(user_params)
     flash[:info]="Successfully edited"
-    redirect_to home_url
+    redirect_to root_url
   else
     render 'edit'
   end
@@ -20,7 +20,7 @@ def create
   if @user.save
     login @user
     flash[:info]="Welcome to QuickThoughts"
-    redirect_to user_path(@user)
+    redirect_to root_url
   else
     render 'static_pages/home'
   end
