@@ -1,5 +1,5 @@
 <h2>Signup</h2>
-    <%= form_for(@user ||= User.new) do |f| %>
+    <%= form_for(@user = User.new) do |f| %>
     <%= render 'shared/error_messages',object: f.object %>
 
     <%=f.label :name %>
