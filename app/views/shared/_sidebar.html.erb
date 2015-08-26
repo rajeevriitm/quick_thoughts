@@ -14,10 +14,14 @@
   <!-- SIDEBAR USER TITLE -->
   <div class="profile-usertitle">
     <div class="profile-usertitle-name">
-      Marcus Doe
+      <%= @user.name  %>
     </div>
     <div class="profile-usertitle-job">
-      Developer
+      <% if option=@user.option %>
+      <%= option %>
+      <% else %>
+      <%= link_to "add option", edit_user_path(@user)  %>
+      <% end %>
     </div>
   </div>
   <!-- END SIDEBAR USER TITLE -->

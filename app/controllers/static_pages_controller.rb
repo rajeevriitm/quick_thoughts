@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
-  # before_action :logged_in_user
+  before_action :logged_in_user,only: [:personal,:notes,:diary]
+  before_action :user_define,only: [:personal,:notes,:diary,:home]
 
   def home
   end
@@ -25,4 +26,11 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
+
+  private
+
+  def user_define
+    @user=current_user
+  end
+
 end
