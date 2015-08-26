@@ -1,4 +1,11 @@
 <% provide(:title, "edit profile") %>
+      <% content_for :prof_pic do %>
+      <% if @user.picture?  %>
+        <%= image_tag(@user.picture.url, class: "img-responsive", alt: " Profile Picture") %>
+        <% else %>
+        <%= image_tag(asset_path("default.jpg"), class: " img-responsive", alt: "Profile Picture",size: "200x200") %>
+        <% end %>
+  <% end %>
 <div class="container edit-user">
   <hr>
   <div class="row ">
@@ -6,7 +13,7 @@
     <!-- left column -->
     <div class="col-md-2">
       <div class="text-center">
-        <%= image_tag @user.picture.url if @user.picture? %>
+    <%= content_for :prof_pic  %>
         <!-- <img src="//placehold.it/100" class="avatar img-circle" alt="avatar"> -->
         <h6>Upload a different photo...</h6>
 

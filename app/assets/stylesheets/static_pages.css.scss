@@ -1,7 +1,12 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+.first-page{
+margin: 0 -20px -20px -30px;
+padding-left: -10px;
+line-height: 15px;
+// background-color: #DEECF4;
+}
 
 
 // main page
@@ -11,7 +16,7 @@
   // padding-top: -35px;
 }
 #main-text {
-  margin-top: -40px;
+  margin-top: -30px;
   margin-left: -5 0px;
 }
 #main-page {
