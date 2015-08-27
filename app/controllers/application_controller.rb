@@ -17,4 +17,5 @@ class ApplicationController < ActionController::Base
     redirect_to(session[:request_url] || default)
     session.delete(:request_url)
   end
+
 end

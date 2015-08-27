@@ -19,3 +19,12 @@
 <% end %>
 
 
+<script>
+var valueToSelect= "<%= action_name.capitalize  %>"
+function SelectElement(valueToSelect)
+{
+    var element = document.getElementById('thought_category');
+    element.value = valueToSelect;
+}
+SelectElement(valueToSelect)
+</script>

@@ -2,9 +2,9 @@ var ready
 ready=function(){
   // if ($('.label-info').length) {}
   //  else {$(".bootstrap-tagsinput").find("input").attr({placeholder: "Add to thoughts...", style: "width: 10em ! important;"});}
-   $('.thought-respond').click(function(){
+  $('.thought-respond').click(function(){
       // var thoughtid= 2 ;
-      $("select").hide();
+      SelectElement("Add")
       var thoughtid= $(this).attr("data-id");
       // var thoughtid= $(this).data('id');
       // alert(thoughtid) ;
@@ -12,8 +12,8 @@ ready=function(){
       // $("input[placeholder='Respond to thoughts']").val("")
       $('#thought_tag_list').tagsinput('add', thoughtid);
     });
-   var c=0;
-   function postVisible(){
+  var c=0;
+  function postVisible(){
     if ($('#visibility-point').visible())
      { }
    else{

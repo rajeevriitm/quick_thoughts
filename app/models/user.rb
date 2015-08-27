@@ -29,8 +29,7 @@ class User < ActiveRecord::Base
   def forget
     self.update_attribute(:remember_digest, nil)
   end
-  def feed(action_name)
-    category=action_name.capitalize
+  def feed(category)
     self.thoughts.where('category=?',category)
   end
 

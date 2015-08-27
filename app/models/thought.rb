@@ -1,7 +1,7 @@
 class Thought < ActiveRecord::Base
   belongs_to :user
-  has_many :additions, class_name:"Response", dependent: :destroy
-  has_many :reverse_additions, class_name: "Response", foreign_key: "resp_id",dependent: :destroy
+  has_many :responses, dependent: :destroy
+  has_many :response_thoughts, through: :responses, source: :resp
   has_many :tags, through: :additions, source: :resp
   default_scope -> { order(created_at: :desc) }
   validates :user_id,presence: true
@@ -16,7 +16,8 @@ class Thought < ActiveRecord::Base
     else
       list.each do |tag|
         return false unless (Thought.exists?(tag) && self.save)
-        self.additions.build(resp_id: tag)
+        # raise
+        Response.create(thought_id: tag,resp_id: self.id)
       end
     end
   end

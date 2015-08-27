@@ -44,4 +44,11 @@ module SessionsHelper
     cookies.delete(:user_id)
     cookies.delete(:remember_token)
   end
+  def category_select
+    unless action_name=="show"
+      action_name.capitalize
+    else
+      "Home"
+    end
+  end
 end

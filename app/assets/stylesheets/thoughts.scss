@@ -30,6 +30,9 @@
 #thought_content{
   height: 400px;
 }
+.thought-list{
+  margin: -8px -12px 0 -12px;
+}
 .thought-content{
   font-family: Serif;
   // line-height: 135%;
@@ -75,8 +78,8 @@ margin: 0 -4px 0 -4px;
   float: right;
   // padding: 0;
   height: 10px;
-    font-size: 13px;
-    margin-top: -1px;
+  font-size: 13px;
+  margin-top: -1px;
 
 }
 .label-info{
@@ -84,12 +87,29 @@ margin: 0 -4px 0 -4px;
 }
 .feed-title{
   margin-top: -10px;
+  padding-bottom: 6px;
   font-size: 160%;
   font-weight: 500;
   margin: -20px 0 0 0;
-    color: #CA4040;
+  color: #CA4040;
   // background-color: #D4F0D1;
       // text-decoration: underline;
   // padding-bottom: 0;
   text-align: center;
+}
+.by-user{
+  visibility: hidden;
+}
+.added-thoughts{
+  margin-top: -8px;
+  li{
+    margin-top: -15px ;
+    margin-left: -25px;
+    button{
+      visibility: hidden;
+    }
+    .by-user{
+      visibility: visible;
+    }
+  }
 }
