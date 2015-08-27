@@ -15,7 +15,19 @@ class StaticPagesController < ApplicationController
   end
 
   def diary
-    render 'home'
+    if allowed?(@user)
+      render 'home'
+    else
+      render 'login'
+    end
+  end
+  def auth
+    if current_user.authenticate(params[:password])
+      authnt(current_user)
+      redirect_to diary_path
+    else
+      render 'login'
+    end
   end
 
   def help

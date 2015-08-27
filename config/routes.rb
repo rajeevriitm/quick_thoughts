@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'personal' ,  to:  'static_pages#personal'
   get 'notes' , to: 'static_pages#notes'
   get 'diary' ,  to: 'static_pages#diary'
+  post 'auth' , to: "static_pages#auth"
   resources :thoughts
   resources :users
   post 'login' ,  to: 'sessions#create'

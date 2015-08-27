@@ -32,7 +32,6 @@ class User < ActiveRecord::Base
   def feed(category)
     self.thoughts.where('category=?',category)
   end
-
   private
   def picture_size
     if picture.size > 5.megabytes

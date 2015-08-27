@@ -39,6 +39,13 @@ module SessionsHelper
     cookies.permanent[:remember_token]=user.remember_token
   end
 
+  def authnt(user)
+    session[:auth_id]=user.id
+  end
+  def allowed?(user)
+    !session[:auth_id].nil?
+  end
+
   def forget(user)
     user.forget
     cookies.delete(:user_id)
