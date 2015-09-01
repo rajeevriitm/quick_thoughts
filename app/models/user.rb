@@ -30,7 +30,7 @@ class User < ActiveRecord::Base
     self.update_attribute(:remember_digest, nil)
   end
   def feed(category)
-    self.thoughts.where('category=?',category)
+    self.thoughts.where('category=?',category).all
   end
   private
   def picture_size

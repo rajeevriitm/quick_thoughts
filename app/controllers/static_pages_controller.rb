@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-  before_action :logged_in_user,only: [:personal,:notes,:diary]
+  before_action :logged_in_user,only: [:personal,:notes,:diary,:home]
   before_action :user_define,only: [:personal,:notes,:diary,:home]
 
   def home
@@ -10,8 +10,6 @@ class StaticPagesController < ApplicationController
   end
 
   def notes
-    render 'home'
-
   end
 
   def diary
@@ -43,6 +41,7 @@ class StaticPagesController < ApplicationController
 
   def user_define
     @user=current_user
+    @feed=current_user.feed(category_select).paginate(page: params[:page],per_page: 10)
   end
 
 end

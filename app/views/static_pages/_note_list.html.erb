@@ -1,0 +1,21 @@
+<li class="well">
+  <% unless note.title.empty? %>
+  <%= note.title  %>
+  <% end %>
+  <%= note.content  %>
+  <% if note.user ==current_user %>
+  <span class="thought-edit-delete">
+    <span class="dropdown">
+      <button class="btn btn-link  dropdown-toggle" type="button" data-toggle="dropdown" type="button">Options</button>
+      <ul class="dropdown-menu">
+      <li><%= link_to "Edit",edit_thought_path(note),remote: true  %></li>
+      <li><%= link_to "Delete",thought_path(note) ,method: :delete %></li>
+      </ul>
+    </span>
+    <span class="posted-tim">
+    Posted <%=  time_of_creation(note.created_at) %>
+    </span>
+  </span>
+  <% end %>
+
+</li>

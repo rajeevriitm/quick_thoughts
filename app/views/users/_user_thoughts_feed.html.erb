@@ -1,8 +1,9 @@
+<% provide :title,"#{@user.name}" %>
 <div class="home-feed" >
 <ol  class="well">
-<div class="feed-title "> <%= action_name.capitalize  %> </div>
-<%= render @user.feed(" Home") %>
+<div class="feed-title "> <%= @user.name.capitalize  %> </div>
+<%= render @feed %>
 </ol>
+<%= will_paginate @feed %>
 </div>
-
 

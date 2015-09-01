@@ -21,7 +21,7 @@ gem 'jquery-turbolinks'
 gem 'carrierwave',           '0.10.0'
 gem 'mini_magick',           '3.8.0'
 gem 'fog',                        '1.23.0'
-
+gem 'twitter-typeahead-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
@@ -34,6 +34,10 @@ gem 'bootstrap-sass' , '3.2.0.0'
 # gem 'unicorn'
 gem 'faker',              '1.4.2'
 gem 'bootstrap-tagsinput-rails', '~> 0.4.2.1'
+gem 'will_paginate',      '3.0.7'
+gem 'bootstrap-will_paginate',     '0.0.10'
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 group :production do

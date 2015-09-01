@@ -14,6 +14,7 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require bootstrap
+//= require twitter/typeahead
 //= require bootstrap-tagsinput
 //= require_tree
 //= require turbolinks

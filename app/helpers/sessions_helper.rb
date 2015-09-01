@@ -42,6 +42,7 @@ module SessionsHelper
   def authnt(user)
     session[:auth_id]=user.id
   end
+
   def allowed?(user)
     !session[:auth_id].nil?
   end

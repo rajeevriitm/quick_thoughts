@@ -2,9 +2,11 @@ var ready
 ready=function(){
   // if ($('.label-info').length) {}
   //  else {$(".bootstrap-tagsinput").find("input").attr({placeholder: "Add to thoughts...", style: "width: 10em ! important;"});}
+  $(".bootstrap-tagsinput").hide();
   $('.thought-respond').click(function(){
       // var thoughtid= 2 ;
-      SelectElement("Add")
+      $(".bootstrap-tagsinput").show();
+      SelectElement("Add");
       var thoughtid= $(this).attr("data-id");
       // var thoughtid= $(this).data('id');
       // alert(thoughtid) ;

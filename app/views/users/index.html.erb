@@ -1,0 +1,21 @@
+<% provide :title,"Users" %>
+
+
+<div class="container-fluid login-home">
+  <div class="row profile">
+    <div class="col-md-2">
+      <%= render 'shared/sidebar'  %>
+    </div>
+    <div class="col-md-6 thought-feed">
+      <div class="home-feed" >
+        <ol  class="well">
+          <div class="feed-title "> Users </div>
+          <%= render @users %>
+        </ol>
+        <%= will_paginate @users %>
+      </div>      </div>
+      <span class="col-md-3 thought-column">
+        <%= render 'shared/thoughts_form'  %>
+      </span>
+    </div>
+  </div>

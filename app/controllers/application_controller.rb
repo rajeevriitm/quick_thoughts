@@ -6,12 +6,11 @@ class ApplicationController < ActionController::Base
   def logged_in_user
     unless logged_in?
       store_location
-      flash[:danger]="Please login"
-      redirect_to root_path
+      render 'home'
     end
   end
   def store_location
-    session[:request_url]=request.url if request.get
+    session[:request_url]=request.url if request.get?
   end
   def redirect_back_or(default)
     redirect_to(session[:request_url] || default)
