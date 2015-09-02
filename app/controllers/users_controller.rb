@@ -1,13 +1,14 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: [:show,:edit,:update,:index]
   before_action :correct_user,only: [:edit,:update]
+  before_action :users_list,only: :index
 
   def index
     @user=current_user
-    @users=User.all.paginate(page: params[:page],per_page: 30)
     respond_to do |format|
-      format.html
-      format.json {render json:@users}
+      format.html { @users=@list.paginate(page: params[:page])
+                          render 'index'}
+      format.json {render json:@list}
     end
   end
   def new
@@ -47,6 +48,14 @@ class UsersController < ApplicationController
   def correct_user
     redirect_to :back unless @user==current_user
   end
+  def users_list
+    if params[:search]
+      @list=User.where('lower(name) like ?',"%#{params[:search].downcase}%")
+    else
+      @list=User.all
+    end
+  end
+
 
 end
 

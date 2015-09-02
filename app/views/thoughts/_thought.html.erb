@@ -25,7 +25,7 @@ Thought
         <button class="btn btn-link  dropdown-toggle" type="button" data-toggle="dropdown" type="button">Options</button>
         <ul class="dropdown-menu ">
           <li><%= link_to "Edit",edit_thought_path(thought),remote: true  %></li>
-          <li><%= link_to "Delete",thought_path(thought) ,method: :delete %></li>
+          <li><%= link_to "Delete",thought_path(thought) ,method: :delete ,data:{confirm:"Sure?"}%></li>
         </ul>
       </span>
       <span class="posted-time">

@@ -3,7 +3,7 @@ User.create!(name:"Rajeev Ramakrishnan",email:"rajeevriitm@gmail.com",
 50.times do |n|
   name=Faker::Name.name
   email = "Rajeev-#{n+1}@railstutorial.org"
-  User.create!(name:name,email:email,password:"password",password_confirmation:"password")
+  User.create!(name:name,email:email,password:"password",password_confirmation:"password", about: "beginner")
 end
 users=User.order(:created_at).take(6)
 30.times do

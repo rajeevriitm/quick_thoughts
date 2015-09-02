@@ -1,4 +1,4 @@
-<% provide :title,"Users" %>
+<% provide :title, params[:search] ? "search #{params[:search]}" : "Users" %>
 
 
 <div class="container-fluid login-home">
@@ -9,7 +9,9 @@
     <div class="col-md-6 thought-feed">
       <div class="home-feed" >
         <ol  class="well">
-          <div class="feed-title "> Users </div>
+          <div class="feed-title ">
+            <%= params[:search] ? "Results for #{params[:search]}" : "Users"   %>
+          </div>
           <%= render @users %>
         </ol>
         <%= will_paginate @users %>
