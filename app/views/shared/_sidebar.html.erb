@@ -26,6 +26,9 @@
   </div>
   <!-- END SIDEBAR USER TITLE -->
   <!-- SIDEBAR BUTTONS -->
+  <div class="thought-count">
+  <%= @user.thoughts.where("category= ? ","Home").count  %> thoughts
+  </div>
   <div class="profile-userbuttons">
     <button type="button" class="btn btn-success btn-sm">Follow</button>
   </div>
