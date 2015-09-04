@@ -2,9 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .first-page{
-margin: 0 -20px -20px -30px;
-padding-left: -10px;
-line-height: 15px;
+  margin: 0 -20px -20px -30px;
+  padding-left: -10px;
+  line-height: 15px;
 // background-color: #DEECF4;
 }
 .site-info{
@@ -59,9 +59,10 @@ line-height: 15px;
 /* Profile sidebar */
 .profile-sidebar {
   padding: 20px 10px 10px 0;
-  background: #fff;
+  background-image:  url("side.jpg");
   // margin-left: -70px;
   margin-right: -20px;
+  font-weight: bold;
 }
 
 .profile-userpic img {
@@ -94,25 +95,19 @@ line-height: 15px;
   margin-bottom: 15px;
 }
 
-.profile-userbuttons {
+
+.profile-userbuttons  {
   text-align: center;
   margin-top: 10px;
-}
-
-.profile-userbuttons .btn {
-  text-transform: uppercase;
-  font-size: 11px;
-  font-weight: 600;
+  // text-transform: uppercase;
+  font-size: 12px;
   padding: 6px 15px;
-  margin-right: 5px;
 }
 
-.profile-userbuttons .btn:last-child {
-  margin-right: 0px;
-}
 
 .profile-usermenu {
-  margin-top: 20px;
+  margin-top: 15px;
+  margin-left: 5px;
 }
 
 .profile-usermenu ul li {
@@ -126,7 +121,9 @@ line-height: 15px;
 .profile-usermenu ul li a {
   color: #93a3b5;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 700;
+  color: #4A0B0B ;
+
 }
 
 .thought-count{
@@ -136,11 +133,11 @@ line-height: 15px;
 .profile-usermenu ul li a i {
   margin-right: 8px;
   font-size: 14px;
+  color: #5b9bd1;
 }
 
 .profile-usermenu ul li a:hover {
   background-color: #fafcfd;
-  color: #5b9bd1;
 }
 
 .profile-usermenu ul li.active {
@@ -177,13 +174,36 @@ line-height: 15px;
   margin-top: 5px !important;
   height: 31px;
   // height:50%;
-  }
-.navbar-nav .input-group-btn button {
-height: 31px;}
-nav#header{
-height: 15px;
-
 }
-.search-type{
-  margin: 5px 5px 0 5px;
+.navbar-nav .input-group-btn button {
+  height: 31px;}
+  nav#header{
+    height: 15px;
+
+  }
+  .search-type{
+    margin: 5px 5px 0 5px;
+  }
+  .following_user_list{
+    // margin-left: -30px;
+    padding: 0;
+  // margin-left: -70px;
+  margin-right: -20px;
+  background-image:  url("side.jpg");
+  .move_list{
+    margin-left: -40px;
+  }
+  li{
+    list-style: none;
+    span{
+      overflow: hidden;
+      display: inline-block;
+      a{
+        font-size: 15px;
+        color: #15361E;
+      }
+    }
+  }
+  font-size: 10px;
+
 }

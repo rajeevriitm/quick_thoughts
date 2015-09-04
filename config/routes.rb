@@ -3,8 +3,13 @@ Rails.application.routes.draw do
   get 'notes' , to: 'static_pages#notes'
   get 'diary' ,  to: 'static_pages#diary'
   post 'auth' , to: "static_pages#auth"
-  resources :thoughts
-  resources :users
+  resources :thoughts,only:[:edit,:create,:update,:destroy]
+  resources :users do
+    member do
+      get :following,:followers
+    end
+  end
+  resources :relationships, only: [:create,:destroy]
   post 'login' ,  to: 'sessions#create'
   delete 'logout' , to: 'sessions#destroy'
   root 'static_pages#home'

@@ -1,12 +1,9 @@
 <li class="user_list_item"><span>
 <%= image_tag(user.picture? ? user.picture.url : asset_path("default.jpg"), class: "img-responsive ",
- alt: user.name,size: "48x48") %>
+ alt: user.name,size: "20x20") %>
   </span>
   <span class="user_name">
     <div> <%= link_to "#{user.name.capitalize}",user_path(user) %></div>
-    <div class="user_about">
-      <%=  user.about %>
-    </div>
-    </span>
 
+    </span>
 </li>

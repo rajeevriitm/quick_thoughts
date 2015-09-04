@@ -1,5 +1,8 @@
+<% if action_name == "index" %>
 <% provide :title, params[:search] ? "search #{params[:search]}" : "Users" %>
-
+<% else %>
+<% provide :title, action_name %>
+<% end %>
 
 <div class="container-fluid login-home">
   <div class="row profile">

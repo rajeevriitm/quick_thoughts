@@ -28,11 +28,11 @@ Thought
           <li><%= link_to "Delete",thought_path(thought) ,method: :delete ,data:{confirm:"Sure?"}%></li>
         </ul>
       </span>
+    </span>
+    <% end %>
       <span class="posted-time">
         Posted <%=  time_of_creation(thought.created_at) %>
       </span>
-    </span>
-    <% end %>
   </div>
 </li>
 <% responses=thought.response_thoughts %>

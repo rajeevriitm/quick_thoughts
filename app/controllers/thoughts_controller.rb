@@ -13,9 +13,6 @@ class ThoughtsController < ApplicationController
 
   end
 
-  def show
-  end
-
   def edit
     # @thought=Thought.find_by(id: params[:id])
     respond_to do |format|

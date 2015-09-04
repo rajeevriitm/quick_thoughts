@@ -1,9 +1,9 @@
 $(document).ready(function(){
-
+  var controller_url = (typeof controller_in == "undefined") ? "users?search=%QUERY" : "?search=%QUERY"
   var names = new Bloodhound({
     datumTokenizer: Bloodhound.tokenizers.whitespace('name'),
     queryTokenizer: Bloodhound.tokenizers.whitespace,
-    remote: {url: "users?search=%QUERY" , wildcard: '%QUERY'
+    remote: {url: controller_url , wildcard: '%QUERY'
         }
       });
 

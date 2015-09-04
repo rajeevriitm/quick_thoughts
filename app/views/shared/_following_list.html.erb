@@ -1,0 +1,7 @@
+<div class="following_user_list">
+  <ol class="move_list">
+    <% @user.followings.take(10).each do |user| %>
+      <%= render 'shared/friends_list', user: user  %>
+    <% end %>
+  </ol>
+</div>

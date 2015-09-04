@@ -59,4 +59,7 @@ module SessionsHelper
       "Home"
     end
   end
+  def right_user(user)
+    current_user == user
+  end
 end
