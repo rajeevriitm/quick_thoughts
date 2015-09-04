@@ -17,7 +17,7 @@
 // main page
 .main-body{
   background-color: #ebeef4;
-  margin-top: -58px ;
+  margin-top: -50px ;
   // padding-top: -35px;
 }
 #main-text {
@@ -59,7 +59,7 @@
 /* Profile sidebar */
 .profile-sidebar {
   padding: 20px 10px 10px 0;
-  background-image:  url("side.jpg");
+  background-image:  url(asset-path("side.jpg"));
   // margin-left: -70px;
   margin-right: -20px;
   font-weight: bold;
@@ -189,7 +189,7 @@
     padding: 0;
   // margin-left: -70px;
   margin-right: -20px;
-  background-image:  url("side.jpg");
+  background-image:  url(asset-path("side.jpg"));
   .move_list{
     margin-left: -40px;
   }
