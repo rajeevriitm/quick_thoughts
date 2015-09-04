@@ -60,6 +60,9 @@
 .profile-sidebar {
   padding: 20px 10px 10px 0;
   background-image:  url(asset-path("side.jpg"));
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
   // margin-left: -70px;
   margin-right: -20px;
   font-weight: bold;
@@ -190,11 +193,19 @@
   // margin-left: -70px;
   margin-right: -20px;
   background-image:  url(asset-path("side.jpg"));
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
   .move_list{
     margin-left: -40px;
+    margin-top: 5px;
+    // padding: 5px 0 10px 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
   li{
     list-style: none;
+    padding: 2px 0 2px 0;
     span{
       overflow: hidden;
       display: inline-block;
