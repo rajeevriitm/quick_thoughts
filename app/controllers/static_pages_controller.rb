@@ -24,6 +24,7 @@ class StaticPagesController < ApplicationController
       authnt(current_user)
       redirect_to diary_path
     else
+      @user=current_user
       render 'login'
     end
   end
